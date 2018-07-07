@@ -14,14 +14,15 @@ Summary: pytest plugin to display test execution output like a SPECIFICATION
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pytest-spec-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pytest-spec-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pytest-spec-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pytest-spec-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pytest-spec-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pytest-spec-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pytest-spec-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pytest-spec-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-spec/badges/version.svg)](https://anaconda.org/conda-forge/pytest-spec)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pytest-spec/badges/downloads.svg)](https://anaconda.org/conda-forge/pytest-spec)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--spec-green.svg)](https://anaconda.org/conda-forge/pytest-spec) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-spec.svg)](https://anaconda.org/conda-forge/pytest-spec) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-spec.svg)](https://anaconda.org/conda-forge/pytest-spec) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-spec.svg)](https://anaconda.org/conda-forge/pytest-spec) |
 
 Installing pytest-spec
 ======================
@@ -66,6 +67,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
