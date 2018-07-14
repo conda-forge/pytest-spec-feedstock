@@ -30,7 +30,7 @@ test:
   source_files:
     - test
   commands:
-    - py.test test
+    - py.test --spec test
 
 about:
   home: https://github.com/pchomik/pytest-spec
