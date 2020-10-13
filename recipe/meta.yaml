@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: pytest-spec-{{version}}.tar.gz
+  fn: pytest-spec-{{ version }}.tar.gz
   url: https://github.com/pchomik/pytest-spec/archive/{{ version }}.tar.gz
   sha256: 6f56e392d13879bcc8af0f99550a1ead9dfcc97d66c44f54bfb1d32d27eec2a1
 
 build:
     script: python setup.py install --single-version-externally-managed --record record.txt
-    number: 0
+    number: 1
 
 requirements:
   build:
