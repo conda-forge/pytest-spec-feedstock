@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "3.0.6" %}
 
 package:
   name: pytest-spec
@@ -7,14 +7,14 @@ package:
 source:
   fn: pytest-spec-{{ version }}.tar.gz
   url: https://github.com/pchomik/pytest-spec/archive/{{ version }}.tar.gz
-  sha256: 6f56e392d13879bcc8af0f99550a1ead9dfcc97d66c44f54bfb1d32d27eec2a1
+  sha256: 396f7d0aeed769b7566978cde5ef5765598d6139c8b47eb92709fe9561ee1c08
 
 build:
-    script: python setup.py install --single-version-externally-managed --record record.txt
-    number: 1
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
 
@@ -35,7 +35,7 @@ about:
   license: GPL-2.0
   license_family: GPL2
   license_file: LICENSE.txt
-  summary: 'pytest plugin to display test execution output like a SPECIFICATION'
+  summary: pytest plugin to display test execution output like a SPECIFICATION
 
   dev_url: https://github.com/pchomik/pytest-spec
 
