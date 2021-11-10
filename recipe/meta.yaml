@@ -1,41 +1,44 @@
-{% set version = "2.0.0" %}
+{% set name = "pytest-spec" %}
+{% set version = "3.2.0" %}
+
 
 package:
-  name: pytest-spec
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: pytest-spec-{{ version }}.tar.gz
-  url: https://github.com/pchomik/pytest-spec/archive/{{ version }}.tar.gz
-  sha256: 6f56e392d13879bcc8af0f99550a1ead9dfcc97d66c44f54bfb1d32d27eec2a1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest-spec-{{ version }}.tar.gz
+  sha256: 4af154588195f4bb6c62d6ca030a20218db7d80b675a08897d9a99239ea3d087
 
 build:
-    script: python setup.py install --single-version-externally-managed --record record.txt
-    number: 1
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
-    - setuptools
-
+  host:
+    - python >=3.6
+    - poetry
+    - pip
   run:
-    - python
-    - setuptools
-    - pytest
-    - mock >=1.0.1
+    - python >=3.6
+    - six
 
 test:
-  source_files:
+  imports:
+    - pytest_spec
     - test
   commands:
-    - py.test test
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pchomik/pytest-spec
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_family: GPL2
   license_file: LICENSE.txt
-  summary: 'pytest plugin to display test execution output like a SPECIFICATION'
+  summary: pytest plugin to display test execution output like a SPECIFICATION
 
   dev_url: https://github.com/pchomik/pytest-spec
 
