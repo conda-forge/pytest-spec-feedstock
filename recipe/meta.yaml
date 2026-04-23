@@ -1,5 +1,5 @@
 {% set name = "pytest-spec" %}
-{% set version = "3.2.0" %}
+{% set version = "5.1.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest-spec-{{ version }}.tar.gz
-  sha256: 4af154588195f4bb6c62d6ca030a20218db7d80b675a08897d9a99239ea3d087
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 841aef3d40b1be61351ade0b1bd8de25d74530670c55f4f95de8c6ebf3ea10cd
 
 build:
   number: 0
